@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens — deliberately not the stock Tailwind blue-600 / slate-900.
+ * Referenced throughout via arbitrary-value classes, e.g. bg-[var(--brand-blue)],
+ * which keeps the design system independent of the Tailwind config file/version.
+ */
+:root {
+  --brand-blue: #1e5fa8;
+  --brand-blue-dark: #164a85;
+  --brand-navy: #0b1e3d;
+  --brand-gray: #f4f5f7;
+  --brand-gold: #c9962f;
+  --brand-gold-dark: #8a6420;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+}
+
+.font-display {
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Subtle dot-grid texture used behind the hero's signature token card. */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+::selection {
+  background: var(--brand-blue);
+  color: #ffffff;
+}
