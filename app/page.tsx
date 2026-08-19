@@ -9,6 +9,7 @@ import IconCard from "@/components/ui/IconCard";
 import CTABanner from "@/components/ui/CTABanner";
 import Button from "@/components/ui/Button";
 import { featuredServices, whyChooseUs } from "@/data/config";
+import {Analytics} from "@vercel/analytics/react"; 
 
 export const metadata: Metadata = {
   title: "Home",
@@ -65,6 +66,7 @@ export default function HomePage() {
         primary={{ label: "Contact Us", href: "/contact" }}
         secondary={{ label: "Apply for Scholarship", href: "/scholarship#apply" }}
       />
+      <Analytics />
     </>
   );
 }
